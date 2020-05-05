@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editing {{.Title}}</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            color: rgb(34, 122, 255);
+        }
+        button {
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Editing {{.Title}}</h1>
+
+    <form action="/save/{{.Title}}" method="POST">
+        <div>
+            <textarea name="body" rows="20" cols="80">{{printf "%s" .Body}}</textarea>
+        </div>
+        <div>
+            <input type="submit" value="Save">
+        </div>
+    </form>
+</body>
+</html>

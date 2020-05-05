@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Title}}</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            color: rgb(82, 142, 221);
+        }
+    </style>
+</head>
+<body>
+    <h1>{{.Title}}</h1>
+    <p>[<a href="/edit/{{.Title}}">edit</a>]</p>
+    <div>{{printf "%s" .Body}}</div>
+</body>
+</html>
